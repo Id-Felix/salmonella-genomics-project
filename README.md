@@ -65,7 +65,7 @@ ABRicate analysis against the CARD database revealed specific AMR profile.
 | **qnrB19_1**      | Protects **DNA gyrase** and **topoisomerase IV** from fluoroquinolone inhibition, reducing the binding affinity of fluoroquinolones.                                                                                                   | Ciprofloxacin  | Fluoroquinolones                  |
 
 
-**4.3 Identifcation of Virulence Factors**
+**4.3 Identification of Virulence Factors**
 
 Analysis with the VFDB database identified a full complement of critical virulence factors, explaining the strain's hypervirulence.
 
