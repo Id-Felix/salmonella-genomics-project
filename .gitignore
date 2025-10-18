@@ -4,7 +4,5 @@
 # But not these
 !.gitignore
 !scripts/
-!results/
 !scripts/**
-!results/**
 
