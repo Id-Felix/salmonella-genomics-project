@@ -115,4 +115,6 @@ Analysis with the VFDB database identified a full complement of critical virulen
 
 
 
-**4.4 
+**4.4 Comparative Genomic Analysis Across Regions**
+
+
