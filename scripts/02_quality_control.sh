@@ -2,7 +2,6 @@
 # ================================================================
 # Script: 02_quality_control.sh
 # Purpose: Perform quality control and trimming on raw reads
-# Author: Holuwabiggest
 # ================================================================
 
 
@@ -16,12 +15,12 @@ mkdir -p "${TRIM_DIR}"
 mkdir -p "${QC_DIR}/fastqc_raw"
 mkdir -p "${QC_DIR}/fastqc_trimmed"
 
-# === 1️⃣ Run FastQC on raw reads ===
-echo "🔹 Running FastQC on raw reads..."
+# === Run FastQC on raw reads ===
+echo " Running FastQC on raw reads..."
 fastqc ${RAW_DIR}/*.fastq.gz -o ${QC_DIR}/fastqc_raw -t 4
 
-# === 2️⃣ Run fastp for quality trimming ===
-echo "🔹 Running fastp for quality trimming..."
+# === Run fastp for quality trimming ===
+echo "Running fastp for quality trimming..."
 for fq1 in ${RAW_DIR}/*_1.fastq.gz; do
     fq2=${fq1/_1.fastq.gz/_2.fastq.gz}
     sample=$(basename ${fq1} _1.fastq.gz)
@@ -39,8 +38,8 @@ for fq1 in ${RAW_DIR}/*_1.fastq.gz; do
         --json ${QC_DIR}/${sample}_fastp.json
 done
 
-# === 3️⃣ Run FastQC again on trimmed reads ===
-echo "🔹 Running FastQC on trimmed reads..."
+# === Run FastQC again on trimmed reads ===
+echo "Running FastQC on trimmed reads..."
 fastqc ${TRIM_DIR}/*.fastq.gz -o ${QC_DIR}/fastqc_trimmed -t 4
 
 # === ️⃣ Summary ===
