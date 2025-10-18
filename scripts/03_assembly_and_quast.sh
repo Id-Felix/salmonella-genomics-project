@@ -2,7 +2,6 @@
 # ================================================================
 # Script: 03_assembly_and_quast.sh
 # Purpose: Perform genome assembly with SPAdes and evaluate with QUAST
-# Author: Holuwabiggest
 # ================================================================
 
 set -e  # Exit immediately on error
@@ -16,8 +15,8 @@ QUAST_DIR="qc_reports/quast"
 mkdir -p "${ASSEMBLY_DIR}"
 mkdir -p "${QUAST_DIR}"
 
-# === 1️⃣ Assemble each sample with SPAdes ===
-echo "🔹 Starting SPAdes genome assembly..."
+# === Assemble each sample with SPAdes ===
+echo "Starting SPAdes genome assembly..."
 
 for fq1 in ${TRIM_DIR}/*_1.trimmed.fastq.gz; do
     fq2=${fq1/_1.trimmed.fastq.gz/_2.trimmed.fastq.gz}
@@ -35,23 +34,23 @@ for fq1 in ${TRIM_DIR}/*_1.trimmed.fastq.gz; do
         -m 8 \
         --isolate
     
-    echo "✅ Assembly complete for ${sample}"
+    echo "Assembly complete for ${sample}"
 done
 
-# === 2️⃣ Summarize assembly results ===
+# === Summarize assembly results ===
 echo -e "\n🔹 Checking which assemblies succeeded:"
 for dir in ${ASSEMBLY_DIR}/*; do
     sample=$(basename "$dir")
     if [ -s "$dir/contigs.fasta" ]; then
-        echo -e "${sample}\t✅ Success"
+        echo -e "${sample}\t Success"
     else
-        echo -e "${sample}\t❌ Failed or Incomplete"
+        echo -e "${sample}\t Failed or Incomplete"
     fi
 done
 
-# === 3️⃣ Run QUAST for assembly quality ===
+# ===Run QUAST for assembly quality ===
 echo -e "\n🔹 Running QUAST for assembly evaluation..."
 quast.py ${ASSEMBLY_DIR}/*/contigs.fasta -o ${QUAST_DIR} -t 4
 
-echo "✅ QUAST analysis complete!"
+echo "QUAST analysis complete!"
 echo "Results saved to: ${QUAST_DIR}"
