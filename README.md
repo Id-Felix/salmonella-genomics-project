@@ -25,16 +25,17 @@ e. Provide recommendations for antibiotic stewardship and public health interven
 
 **3. Workflow Summary**
 
-| **Step**                     | **Tool/Software**                       | **Description**                                                                                    |
-| ---------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **1. Data Retrieval**        | `wget`, `SRA Toolkit`                   | Download raw sequence reads (FASTQ files) for *Salmonella enterica* isolates from NCBI SRA or ENA. |
-| **2. Quality Control**       | `FastQC`, `fastp`                       | Assess sequence quality, trim adapters, and remove low-quality bases.                              |
-| **3. Genome Assembly**       | `SPAdes`                                | Assemble high-quality reads into contigs.                                                          |
-| **4. Genome Annotation**     | `Prokka`                                | Annotate genes, tRNAs, rRNAs, and hypothetical proteins.                                           |
-| **5. AMR Gene Detection**    | `ABRicate` (CARD, ResFinder databases)  | Identify resistance genes and plasmid-borne determinants.                                          |
-| **6. Comparative Genomics**  |           `Panaroo`                     | Perform pangenome analysis to identify core and accessory genes.                                   |
-| **7. Phylogenetic Analysis** | `IQ-TREE`                     | Build phylogenetic trees from core gene alignments to visualize isolate relationships.             |
-| **8. Reporting**             | `Python`  | Summarize AMR profiles, visualize heatmaps, and interpret results.                                 |
+| Step                               | Tool(s)                        | Description                                                                                |
+| ---------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------ |
+| **1. Data Retrieval**              | `fasterq-dump`, `wget`         | Downloaded sequencing reads from ENA/SRA for Ghana, Guinea, and Nigeria isolates.          |
+| **2. Quality Control**             | `FastQC`, `fastp`              | Performed quality assessment and adapter trimming on raw reads.                            |
+| **3. Assembly**                    | `SPAdes`, `QUAST`              | De novo genome assembly and quality evaluation (contigs, N50, genome size).                |
+| **4. Annotation**                  | `Prokka`                       | Annotated assembled contigs to identify coding regions, rRNAs, and tRNAs.                  |
+| **5. AMR & Virulence Profiling**   | `ABRicate (ResFinder, VFDB)`   | Screened annotated genomes for known AMR and virulence genes.                              |
+| **6. Pan-Genome Analysis**         | `Panaroo`                      | Clustered orthologous genes across isolates to define core and accessory genomes.          |
+| **7. Phylogenetic Reconstruction** | `IQ-TREE`, `snp-dists`         | Built core genome phylogeny and SNP-based distance matrix for evolutionary interpretation. |
+| **8. Visualization**               | `Python (matplotlib, seaborn)` | Generated AMR and virulence heatmaps, and iTOL-ready tree annotations.                     |
+
 
 
 **4. Results**
@@ -116,5 +117,10 @@ Analysis with the VFDB database identified a full complement of critical virulen
 
 
 **4.4 Comparative Genomic Analysis Across Regions**
+
+
+The Minimum Spanning Tree (MST) based on pairwise SNP distances revealed a cluster of two Guinea isolates (0 SNPs apart), suggesting clonal expansion within Guinea. Isolates from Ghana and Nigeria were separated by >50,000 SNPs, indicating distinct lineages with no evidence of recent cross-border transmission. The MST therefore supports localized outbreaks in each country rather than a single transnational transmission chain.
+
+The IQ-Tree phylogeny suggested a closer evolutionary relationship between Guinean and Nigerian isolates, while Ghanaian isolates diverged earlier, indicating distinct ancestral separation.
 
 
