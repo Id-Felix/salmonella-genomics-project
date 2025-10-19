@@ -2,7 +2,7 @@
 
 **1. Project Overview**
 
-In mid-2023, public health authorities in Lagos, Nigeria, launched an investigation into a series of severe food poisoning cases traced to contaminated street-vended chicken salad and boiled eggs. Hospitals across Lagos and Ogun States reported a surge in gastroenteritis cases — some progressing to sepsis, particularly among children and immunocompromised adults.
+In mid-2023, public health authorities in Lagos, Nigeria, launched an investigation into a series of severe food poisoning cases traced to contaminated street-vended chicken salad and boiled eggs. Hospitals across Lagos and Ogun states reported a surge in gastroenteritis cases — some progressing to sepsis, particularly among children and immunocompromised adults.
 
 Preliminary lab analyses identified Salmonella enterica as the causative agent. Alarmingly, several isolates showed poor response to ciprofloxacin and ceftriaxone, two antibiotics commonly used against Salmonella infections.
 
@@ -42,7 +42,7 @@ e. Provide recommendations for antibiotic stewardship and public health interven
 
 **4.1 Organism Identification**
 
-FastANI analysis of the assembled genomes provided definitve species identification. The top FastANI hit for the representative isolate showed 99.8% identity to the reference Salmonella genome, confirming the causative agent of the outbreak.
+FastANI analysis of the assembled genomes provided definitive species identification. The top FastANI hit for the representative isolate showed 99.8% identity to the reference Salmonella genome, confirming the causative agent of the outbreak.
 
 
 |**Subject Accession** | **Percent Identity (%)** |
@@ -124,4 +124,17 @@ The Minimum Spanning Tree (MST) based on pairwise SNP distances revealed a clust
 The IQ-Tree phylogeny suggested a closer evolutionary relationship between Guinean and Nigerian isolates, while Ghanaian isolates diverged earlier, indicating distinct ancestral separation.
 
 
-**Recommendations for Antibiotic Stewardship and Public Health Response**
+**5. Recommendations for Antibiotic Stewardship and Public Health Response**
+
+
+Genomic analysis of Salmonella enterica isolates revealed the presence of qnrB19 and aac(6’)-Iaa_1 genes, which mediate resistance to fluoroquinolones (e.g., ciprofloxacin). This finding suggests that these antibiotic classes may be ineffective for empirical treatment of infections caused by the isolates studied.
+
+For therapeutic management, azithromycin (a macrolide) remains an effective first-line option against multidrug-resistant Salmonella. In severe or systemic infections, carbapenems (e.g., meropenem, imipenem) are recommended as last-resort agents due to their broad efficacy. Where susceptibility is preserved, trimethoprim-sulfamethoxazole can serve as an alternative, while chloramphenicol may be reconsidered in low-resistance contexts.
+
+From a public health standpoint, it is essential to:
+
+1. Strengthen genomic antimicrobial resistance (AMR) surveillance systems across West African countries.
+
+2. Enforce antibiotic stewardship programs in healthcare and agricultural sectors.
+
+3. Promote safe food handling, improved hygiene, and cross-border collaboration to monitor resistant lineages and prevent transmission.
