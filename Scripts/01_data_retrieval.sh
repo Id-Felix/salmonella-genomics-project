@@ -13,7 +13,7 @@ SAMPLES_FILE="samples.txt"
 # Loop through samples
 while read -r country isolate; do
   [[ "$country" == "Country" ]] && continue  # skip header
-  echo "🔹 Downloading $isolate from $country..."
+  echo "Downloading $isolate from $country..."
   mkdir -p reads/"$country"
   fasterq-dump "$isolate" -O reads/"$country" --split-files --progress
   gzip reads/"$country"/*.fastq
