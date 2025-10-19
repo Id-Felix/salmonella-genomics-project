@@ -124,3 +124,4 @@ The Minimum Spanning Tree (MST) based on pairwise SNP distances revealed a clust
 The IQ-Tree phylogeny suggested a closer evolutionary relationship between Guinean and Nigerian isolates, while Ghanaian isolates diverged earlier, indicating distinct ancestral separation.
 
 
+**Recommendations for Antibiotic Stewardship and Public Health Response**
